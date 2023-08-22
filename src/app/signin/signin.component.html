@@ -1,0 +1,68 @@
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="bg-img">
+            <div class="content">
+                <header>Login Form</header>
+                <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+                    <div class="field">
+                    <i class="fa fa-user"></i>
+                        <input type="text" required placeholder="Email or Phone" formControlName="user">
+                        <span style="color: red;" *ngIf="user && user.invalid && user.touched"> user filled is not valid</span>
+                    </div>
+                    <div class="field space">
+                        <i class="fa fa-lock icon"></i>
+                        <input type="password" class="password" required placeholder="password" formControlName="password">
+                        <span style="color: red;" *ngIf="password && password.invalid && password.touched"> password filled is not valid</span>
+                        <span class="show">SHOW</span>
+                    </div>
+                    <div class="pass">
+                        <a href="signup" (click)="onForgotClick()">Forgot Password?</a>
+                    </div>
+                        <button mat-raised-button color="accent"[disabled]="loginForm.invalid" ><a routerLink="signin" (click)="onLoginClick()">LOGIN</a></button>
+                    <div class="login">Or login with</div>
+                    <div class="link">
+                        <div class="facebook">
+                            <i class="fa fa-facebook icon">
+                                <span>Facebook</span>
+                            </i>
+                        </div>
+                        <div class="google">
+                            <i class="fa fa-google icon">
+                                <span>Google</span>
+                            </i>
+                        </div>
+                        <div class="instagram">
+                            <i class="fa fa-instagram icon">
+                                <span>Instagram</span>
+                            </i>
+                        </div>
+                        </div>
+                        <div class="signup" >Don't have account?
+                            <a href="signup" (click)="onForgotClick()">Signup Now</a>
+                        </div>
+                </form>
+            </div>
+        </div>
+    
+        <script>
+            const pass_field=document.querySelector('.password');
+            const show_btn=document.querySelector('.show');
+            show_btn.addEventListener('click',function(){
+                if(pass_field.type === "password"){
+                    pass_field.type="text";
+                    show_btn.style.color="#3498db";
+                    show_btn.textContent="HIDE";
+                } else{
+                    pass_field.type="password";
+                    show_btn.style.color="#222";
+                    show_btn.textContent="SHOW";
+                }
+
+            });
+        </script>
+    </body>
+</html>

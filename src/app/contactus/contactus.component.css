@@ -1,0 +1,24 @@
+.spacer{
+    flex:3 3 auto;
+  }
+  .bg-img{
+    background:url('https://images.moneycontrol.com/static-mcnews/2022/08/sreehari-devadas-WDI95CIPW00-unsplash.jpg?impolicy=website&width=1600&height=900');
+    height: 140vh;
+    background-size: cover;
+    background-position: center;
+  }
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://dwarkafederation.org/wp-content/uploads/2020/09/contact-us.jpg');
+    background-size: cover;
+  }
+  .name{
+    padding-top: 30px;
+}
+h1{
+  font-size: 30px;
+  color: blue;
+}

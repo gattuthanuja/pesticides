@@ -1,0 +1,9 @@
+.spacer{
+    flex:3 3 auto;
+  }
+  .bg-img{
+    background:url('https://images.moneycontrol.com/static-mcnews/2022/08/sreehari-devadas-WDI95CIPW00-unsplash.jpg?impolicy=website&width=1600&height=900');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
